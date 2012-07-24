@@ -53,8 +53,8 @@ resolveConflict = undefined
 
 updPhysics :: Context [Collision] 
 updPhysics = do 
-    ps <- asks $ levelBodies . _cfgLevel
-    as <- access $ rigidBodiesL.mapSndL 
+    ps <- asks   $ levelBodies  . _cfgLevel
+    as <- access $ rigidBodiesL . mapSndL 
     let (newAs, events) = simulate ps as
     rigidBodiesL.mapSndL ~= newAs
     return events

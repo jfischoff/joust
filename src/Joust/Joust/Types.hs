@@ -11,7 +11,7 @@ data Level = Level {
     }
 
 data Platform = Platform {
-        _platPassiveBody  :: PassiveBody, --position, scale, rotation
+        _platPassiveBody  :: PassiveBody,
         _platSpawnPoint   :: Maybe SpawnPoint 
     }
 
